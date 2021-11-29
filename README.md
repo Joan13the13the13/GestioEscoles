@@ -1,2 +1,2 @@
 # GestioEscoles
-Pràctica 1 Algorismia 1
+Pràctica 1 d'Algorismia i Estructura de Dades
