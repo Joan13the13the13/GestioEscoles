@@ -141,9 +141,7 @@ public class LlistaEstudiants implements Interf_Lista {
                 Assignatura a = (Assignatura) e.getAssignAssociades().getElement(j);
                 for (int k = 0; k < lA.getSize(); k++) {
                     if (a == lA.getElementA(k)) {
-                        System.out.println("Assignatura eliminada: "+a.getNom());
                         e.getAssignAssociades().eliminaElement(j);
-                        System.out.println("He eliminat una assignatura de l'estudiant.");
                         j--;
                     }
                 }

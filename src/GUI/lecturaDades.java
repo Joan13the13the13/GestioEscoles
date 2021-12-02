@@ -101,7 +101,6 @@ public class lecturaDades extends JDialog {
             public void mouseClicked(MouseEvent e) {
                 int index = JLe.getSelectedIndex();//começa 0?
                 estudiant = (Estudiant) asign.getLlistaEstudiants().getElement(index);//fer mètode dins assignatura?
-                System.out.println("Assignatures:"+estudiant.getNomsAssignatures());
             }
 
         };

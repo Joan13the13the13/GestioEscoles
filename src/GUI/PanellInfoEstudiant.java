@@ -62,8 +62,6 @@ public class PanellInfoEstudiant extends JPanel {
         assignatures.setBounds(110, 210, 250, 50);
         assignatures.setFont(new Font("Verdana", Font.PLAIN, 15));
         this.add(assignatures);
-        System.out.println(e);
-        System.out.println(e.getNomsAssignatures());
         JLa = new JList(e.getNomsAssignatures().toArray());
         JLa.setFont(new Font("Verdana", Font.BOLD, 15));
 

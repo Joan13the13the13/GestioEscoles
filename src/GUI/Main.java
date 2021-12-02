@@ -114,7 +114,6 @@ public class Main extends JFrame {
         panellBotons.add(baixaAssignatura);
 
         infoCurs = new JButton("Info Curs");
-        infoCurs.setBackground(Color.yellow);
         infoCurs.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ev) {
@@ -149,57 +148,6 @@ public class Main extends JFrame {
             }
         });
         panellBotons.add(sortir);
-
-        llistaC.afegeixElement(new FP("Informática", "122212", 1));
-        FP c2 = (FP) llistaC.getElement(0);
-        //ficam assignatures al curs
-        Obligatoria prova = new Obligatoria("Càlcul", "964445", c2, "6");
-        Optativa prova2 = new Optativa("Discreta", "43555", c2, 1);
-        Estudiant joan = new Estudiant("Joan", "43078654t");
-        prova.afegirEstudiant(joan);
-        //Afegim assignatures asssociades als estudiants
-        joan.afegirAsignatura(prova);
-        joan.afegirAsignatura(prova2);
-
-        Estudiant jaume = new Estudiant("Jaume", "43078654t");
-        llistaE.afegeixElement(jaume);
-        prova.afegirEstudiant(jaume);
-        jaume.afegirAsignatura(prova);
-        jaume.afegirAsignatura(prova2);
-
-        Estudiant alba = new Estudiant("Alba", "43078654t");
-        llistaE.afegeixElement(alba);
-        prova2.afegirEstudiant(alba);
-        alba.afegirAsignatura(prova);
-        alba.afegirAsignatura(prova2);
-
-        Estudiant sara = new Estudiant("Sara", "43078654t");
-        prova2.afegirEstudiant(sara);
-        sara.afegirAsignatura(prova);
-        sara.afegirAsignatura(prova2);
-
-        c2.getAsignatures().afegeixElement(prova);
-        c2.getAsignatures().afegeixElement(prova2);
-
-//        c2.getAsignatures().afegeixElement(new Assignatura("b", "232333", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("s", "677675", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("t", "788665", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("d", "865555", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("o", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("w", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("q", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("v", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("m", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("r", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("l", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("z", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("q", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("p", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("jty", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("hrthe", "964445", c2));
-//        c2.getAsignatures().afegeixElement(new Assignatura("p", "964445", c2));
-        Assignatura a = (Assignatura) c2.getAsignatures().getElement(0);
-        a.getLlistaEstudiants().afegeixElement(new Estudiant("Joan", "43219174N"));
 
     }
 
@@ -241,7 +189,6 @@ public class Main extends JFrame {
 
     private void baixaCurs() {
         new eliminaDades(this, 1, llistaC, llistaE);
-        System.out.println(llistaC.getSize());
     }
 
     private void baixaAssignatura() {

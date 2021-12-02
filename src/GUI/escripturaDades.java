@@ -423,13 +423,10 @@ public class escripturaDades extends JDialog {
             Estudiant e = new Estudiant(nom, DNI);
             if (le.isRepetit(e)) {
                 //cercam l'estudiant dins la llista
-                System.out.println("Trobat estudiant: "+le.cercaElement(e).getNomsAssignatures());
                 le.cercaElement(e).afegirAsignatura(a);
-                System.out.println("Estic afegint un estudiant que ja s'havia creat");
             } else {
                 e.afegirAsignatura(a);
                 le.afegeixElement(e);
-                System.out.println("Estic afegint un estudiant que no s'havia creat abans");
             }
             a.afegirEstudiant(e);
             JOptionPane.showMessageDialog(null, "ESTUDIANT INSERIT CORRECTAMENT");
@@ -444,14 +441,13 @@ public class escripturaDades extends JDialog {
         try {
             JLa.setListData(c.getAsignatures().nomsToArr());
         } catch (NullPointerException e) {
-            System.out.println("llista buida");
+            System.out.println("llista d'assignatures buida");
         }
     }
 
     private void clickLlista2() {
         int index = JLa.getSelectedIndex();
         a = c.getAsign(index);
-        System.out.println(a);
     }
 
     public Curs getCurs() {

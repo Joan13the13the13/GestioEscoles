@@ -76,7 +76,6 @@ public class Llista_Asignatures_Ref implements Interf_Lista {
             contador--;
 
         } else {
-            System.out.println("Llista BUIDA de nodesRef.");
         }
     }
 

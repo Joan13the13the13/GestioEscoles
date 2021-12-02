@@ -230,7 +230,6 @@ public class eliminaDades extends JDialog {
             llistaE.eliminaAssignatures(Celiminat);
             //eliminar assignatures de estyudiant amb curs
             llistaC.eliminaElement(index);
-            System.out.println("Mida llista:"+llistaC.getSize());
             JOptionPane.showMessageDialog(null, "Curs eliminat correctament");
             JLc.setListData(llistaC.nomsToArr());
 

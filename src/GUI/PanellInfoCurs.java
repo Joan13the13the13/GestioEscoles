@@ -153,7 +153,6 @@ public class PanellInfoCurs extends JPanel {
         try{
         JLe.setListData(a.getNomsCompletsEstudiants().toArray());
         }catch(NullPointerException e){
-            System.out.println("llista buida");
         }
         //Modificam el text dels atributs de la assignatura actual
         nomAssignatura.setText("NOM: " + a.getNom());

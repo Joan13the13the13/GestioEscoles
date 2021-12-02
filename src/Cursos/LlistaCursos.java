@@ -96,7 +96,6 @@ public class LlistaCursos implements Interf_Lista {
         String [] arr = new String[llista.size()];
         for (int j = 0; j < llista.size(); j++) {
             arr[j] = llista.get(j).getNom();   
-            System.out.println(arr[j]);
         }
         
         return arr;
